@@ -5,9 +5,8 @@ word_list = ["aardvark", "baboon", "camel"]
 #picks a random word from the word_list and assign it to a variable called chosen_word
 chosen_word = random.choice(word_list)
 
-
-
-
+#ask the user to guess a letter and makes the guess lowercase.
+guess = input("Guess a letter: ").lower()
 
 #print(chosen_word)
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
