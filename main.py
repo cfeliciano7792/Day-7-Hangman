@@ -19,16 +19,15 @@ for letter in chosen_word:
 #ask the user to guess a letter and makes the guess lowercase.
 guess = input("Guess a letter: ").lower()
 
-n=0
+
 #Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 for spaces in range(0, len(chosen_word)):
-  if guess == chosen_word[n]:
-    display[n] = guess
-    n+=1
+  if guess == chosen_word[spaces]:
+    display[spaces] = guess
   else:
-    display[n] = ("_")
-    n+=1
+    display[spaces] = ("_")
+    
 
 print(display)
 
