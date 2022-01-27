@@ -16,6 +16,7 @@ display = []
 for letter in chosen_word:
   display.append("_")
 
+print(display)
 #ask the user to guess a letter and makes the guess lowercase.
 guess = input("Guess a letter: ").lower()
 
