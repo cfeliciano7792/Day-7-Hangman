@@ -12,23 +12,25 @@ print(f'Pssst, the solution is {chosen_word}.')
 #created an empty list called display
 display = []
 
-#For each letter in the chosen_word, add a "_" to 'display'
+#For each letter in the chosen_word, a "_" is added to 'display'
 for letter in chosen_word:
   display.append("_")
+
+#ask the user to guess a letter and makes the guess lowercase.
+guess = input("Guess a letter: ").lower()
+
+n=0
+#Loop through each position in the chosen_word;
+#If the letter at that position matches 'guess' then reveal that letter in the display at that position.
+for spaces in range(0, len(chosen_word)):
+  if guess == chosen_word[n]:
+    display[n] = guess
+    n+=1
+  else:
+    display[n] = ("_")
+    n+=1
 
 print(display)
 
 
 
-
-
-
-#ask the user to guess a letter and makes the guess lowercase.
-guess = input("Guess a letter: ").lower()
-
-#Checking if the letter the user guessed (guess) is one of the letters in the chosen_word
-for letter in chosen_word:
-  if guess == letter:
-    print("Right")
-  else:
-    print("Wrong")
