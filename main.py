@@ -16,11 +16,12 @@ display = []
 for letter in chosen_word:
   display.append("_")
 
+#converts choosen word into a list
 list_word = list(chosen_word)
 
 while not display == list_word:
   
-#TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
+# while loop to let the user guess again. The loop should will stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
 
 #ask the user to guess a letter and makes the guess lowercase.
   guess = input("Guess a letter: ").lower()
