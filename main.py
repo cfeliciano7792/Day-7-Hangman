@@ -18,10 +18,9 @@ for letter in chosen_word:
 
 #converts choosen word into a list
 list_word = list(chosen_word)
-
-while not display == list_word:
-  
+ 
 # while loop to let the user guess again. The loop should will stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
+while not display == list_word:
 
 #ask the user to guess a letter and makes the guess lowercase.
   guess = input("Guess a letter: ").lower()
