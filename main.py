@@ -16,21 +16,24 @@ display = []
 for letter in chosen_word:
   display.append("_")
 
-print(display)
+list_word = list(chosen_word)
+
+while not display == list_word:
+  
+#TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
+
 #ask the user to guess a letter and makes the guess lowercase.
-guess = input("Guess a letter: ").lower()
+  guess = input("Guess a letter: ").lower()
 
 
 #Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
-for spaces in range(0, len(chosen_word)):
-  if guess == chosen_word[spaces]:
-    display[spaces] = guess
-  else:
-    display[spaces] = ("_")
+  for spaces in range(0, len  (chosen_word)):
+    if guess == chosen_word[spaces]:
+      display[spaces] = guess
     
 
-print(display)
-
-
+  print(display)
+if display == list_word:
+  print("You Win")
 
