@@ -77,24 +77,36 @@ display = []
 for letter in chosen_word:
   display.append("_")
 
-#converts choosen word into a list
-list_word = list(chosen_word)
  
 # while loop to let the user guess again. The loop should will stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
-while not display == list_word:
+while "_" in display and lives > 0:
 
 #ask the user to guess a letter and makes the guess lowercase.
   guess = input("Guess a letter: ").lower()
-
-
+  
+  
 #Loop through each position in the chosen_word;
-#If the letter at that position matches 'guess' then reveal that letter in the display at that position.
+#If the letter at that position matches 'guess' then reveal that letter in the display at that position.  
+  
+   
   for spaces in range(0, len  (chosen_word)):
     if guess == chosen_word[spaces]:
-      display[spaces] = guess
+      display[spaces] = guess 
     
+      
+  if guess not in chosen_word:
+    lives -= 1
+    
+  
+  
+
 
   print(display)
-if display == list_word:
+  print(stages[lives])
+
+if "_" not in display and lives > 0:
   print("You Win")
+elif "_" in display and lives == 0:
+  print("You Lose")
+
 
