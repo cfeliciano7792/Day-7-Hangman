@@ -30,6 +30,8 @@ while "_" in display and lives > 0:
 #ask the user to guess a letter and makes the guess lowercase.
   guess = input("Guess a letter: ").lower()
   
+  if guess in display:
+    print(f"You have already guessed {guess}")
   
 #Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.  
