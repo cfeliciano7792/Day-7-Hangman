@@ -100,8 +100,8 @@ while "_" in display and lives > 0:
   
   
 
-
-  print(display)
+  #Join all the elements in the list and turn it into a String
+  print(f"{' '.join(display)}")
   print(stages[lives])
 
 if "_" not in display and lives > 0:
