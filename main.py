@@ -1,3 +1,4 @@
+from replit import clear
 import random
 
 import hangman_art
@@ -27,6 +28,8 @@ while "_" in display and lives > 0:
 
     #ask the user to guess a letter and makes the guess lowercase.
     guess = input("Guess a letter: ").lower()
+
+    clear()
 
     if guess in display:
         print(f"You have already guessed {guess}")
