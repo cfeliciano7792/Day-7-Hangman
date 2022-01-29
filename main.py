@@ -1,62 +1,7 @@
-#Step 1 
 import random
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+import hangman_art
+print(hangman_art.logo)
 
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -102,7 +47,7 @@ while "_" in display and lives > 0:
 
   #Join all the elements in the list and turn it into a String
   print(f"{' '.join(display)}")
-  print(stages[lives])
+  print(hangman_art.stages[lives])
 
 if "_" not in display and lives > 0:
   print("You Win")
